@@ -21,12 +21,12 @@ jobs:
         python -m pip install vtk
         python -m pip install h5py
 
-        python ./mirgecompare.py autoignition-000000-0001.vtu autoignition-000000-0001.vtu 
-        python ./mirgecompare.py autoignition-000000.pvtu autoignition-000000.pvtu
-        python ./mirgecompare.py visualizer_xdmf_box_2d.xmf visualizer_xdmf_box_2d.xmf
-        python ./mirgecompare.py visualizer_xdmf_simplex_2d.h5 visualizer_xdmf_simplex_2d.h5
+        python ./mirgecomparetester.py autoignition-000000-0001.vtu autoignition-000000-0001.vtu 
+        python ./mirgecomparetester.py autoignition-000000.pvtu autoignition-000000.pvtu
+        python ./mirgecomparetester.py visualizer_xdmf_box_2d.xmf visualizer_xdmf_box_2d.xmf
+        python ./mirgecomparetester.py visualizer_xdmf_simplex_2d.h5 visualizer_xdmf_simplex_2d.h5
 
-       python ./mirgecompare.py fld-wave-eager-0000.vtu autoignition-000000-0001.vtu || exit 1
-       python ./mirgecompare.py fld-wave-eager-mpi-000-0000.pvtu autoignition-000000.pvtu || exit 1
-       python ./mirgecompare.py visualizer_xdmf_box_2d.xmf visualizer_xdmf_simplex_2d.xmf || exit 1
-       python ./mirgecompare.py visualizer_xdmf_box_2d.h5 visualizer_xdmf_simplex_2d.h5 || exit 1
+       python ./mirgecomparetester.py fld-wave-eager-0000.vtu autoignition-000000-0001.vtu || exit 1
+       python ./mirgecomparetester.py fld-wave-eager-mpi-000-0000.pvtu autoignition-000000.pvtu || exit 1
+       python ./mirgecomparetester.py visualizer_xdmf_box_2d.xmf visualizer_xdmf_simplex_2d.xmf || exit 1
+       python ./mirgecomparetester.py visualizer_xdmf_box_2d.h5 visualizer_xdmf_simplex_2d.h5 || exit 1
